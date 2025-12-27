@@ -22,12 +22,12 @@ function shuffle(arr)
     }
     return array;
 }
-export default function CardSpace()
+export default function CardSpace({setCurrentScore})
 {
     const data=shuffle(gifData);
     
     return(<><div className="cardSec">
-       {data.map((item)=><Card gifId={item.gifId} name={item.name}/>)}
+       {data.map((item)=><Card gifId={item.gifId} name={item.name} onClick={setCurrentScore}/>)}
         
     </div></>)
 }
