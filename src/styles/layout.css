@@ -1,15 +1,23 @@
 
 .gameRule{
-  font-size: 20px;
+  font-size: 25px;
   padding: 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .score{
-  font-size: 20px;
+  font-size: 30px;
   padding: 10px;
+  font-weight: 800;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .upperPanel{
   display: flex;
   justify-content: space-between;
+  color: gold;
+
+  background: linear-gradient(to bottom,#8f0000, #ca0101);
+  
+  
 }

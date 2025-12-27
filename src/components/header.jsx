@@ -1,6 +1,6 @@
 export default function Head()
 {
     return(
-      <div className="header">Memory Card</div>
+      <div className="header"><span className="marvel">MARVEL</span> Memory Game</div>
     );
 }

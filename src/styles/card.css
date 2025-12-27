@@ -1,13 +1,21 @@
 
 .card{
   height: 380px;
-  width: 300px;
-  padding-top: 25px;
+  width: 290px;
+  padding-top: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* background-color: ; */
+
+  background: linear-gradient(to bottom,rgba(126, 0, 0, 0.261) , #00000088);
+  border-radius: 10px;
 }
 .name{
   font-size: 30px;
   margin-top: 20px;
+  color:gold
+}
+.cardImg{
+  border-radius: 10px;
 }

@@ -32,8 +32,8 @@ export default function Layout()
         <div className="upperPanel">
           <div className="gameRule">click the card to win point but do not click any card twice</div>
           <div className="score">
-            <div>current score:{currentScore}</div>
-            <div>best score:{bestScore}</div>
+            <div>current score : {currentScore}</div>
+            <div>best score : {bestScore}</div>
           </div>
         </div>
         <CardSpace nextRound={nextRound} gameOver={gameOver} cardRecord={cardRecord}/>
