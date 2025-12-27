@@ -8,15 +8,13 @@ export default function Card({gifId,name,id,props})
     return(<>
         
         <div className="card" onClick={()=>{
-            if(props.cardRecord[id]===false)
+            if(props.cardRecord[id]===true)
             {
-                props.nextRound(id);
+                alert('game over');
+                props.gameOver(0);
             }
             else{
-
-                alert('game over');
-                props.gameOver();
-            }
+                props.nextRound(id);}
         }}>
             <img className='cardImg' src={still} height='300px' width='250px' />
             <div className="name">{name}</div>

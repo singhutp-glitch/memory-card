@@ -6,22 +6,25 @@ export default function Layout()
   const [currentScore,setCurrentScore]=useState(0);
   const [bestScore,setBestScore]=useState(0);
   const [cardRecord,setCardRecord]=useState([Array(8).fill(false)]);
-  function gameOver()
+  function gameOver(didWin)
   {
-    setBestScore(currentScore);
+    const newBestScore=Math.max(currentScore+didWin,bestScore);
+    setBestScore(newBestScore);
     setCurrentScore(0);
     setCardRecord(Array(8).fill(false));
   }
   function nextRound(lastSelectedCardId)
-  { if(currentScore===7)
+  { 
+    setCurrentScore((prev)=>prev+1);
+    if(currentScore===7)
     {
       alert('you win');
-      gameOver();
+      gameOver(1);
       
     }
     else{
       setCardRecord((prev)=>[...prev,prev[lastSelectedCardId]=true]);
-      setCurrentScore((prev)=>prev+1);
+      
     }
   }
     return (
@@ -30,7 +33,7 @@ export default function Layout()
           <div className="gameRule">click the card to win point but do not click any card twice</div>
           <div className="score">
             <div>current score:{currentScore}</div>
-            <div>best score:0</div>
+            <div>best score:{bestScore}</div>
           </div>
         </div>
         <CardSpace nextRound={nextRound} gameOver={gameOver} cardRecord={cardRecord}/>
