@@ -9,6 +9,10 @@ const gifData=[{name:'iron man',gifId:"lXo8uSnIkaB9e",id:0},
             {name:'hulk',gifId:'Gwtv1sXXnunMA',id:5},
             {name:'odin',gifId:'Bw40mhWXVHZ0Q',id:6},
             {name:'spider man',gifId:'VZXJyfOqpvuiIw3oJM',id:7},
+            {name:'black widow',gifId:'Zzak2Yc1rm608',id:8},
+            {name:'hawkye',gifId:'KAIHq4s57HAZO',id:9},
+            {name:"vision",gifId:'13AxPITLy0hmBW',id:10},
+            {name:'loki',gifId:'dzKU9L98kJSLK',id:11}
     
 ]
 function shuffle(arr)

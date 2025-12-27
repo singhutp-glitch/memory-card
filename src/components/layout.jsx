@@ -5,18 +5,18 @@ export default function Layout()
 {
   const [currentScore,setCurrentScore]=useState(0);
   const [bestScore,setBestScore]=useState(0);
-  const [cardRecord,setCardRecord]=useState([Array(8).fill(false)]);
+  const [cardRecord,setCardRecord]=useState([Array(12).fill(false)]);
   function gameOver(didWin)
   {
     const newBestScore=Math.max(currentScore+didWin,bestScore);
     setBestScore(newBestScore);
     setCurrentScore(0);
-    setCardRecord(Array(8).fill(false));
+    setCardRecord(Array(12).fill(false));
   }
   function nextRound(lastSelectedCardId)
   { 
     setCurrentScore((prev)=>prev+1);
-    if(currentScore===7)
+    if(currentScore===11)
     {
       alert('you win');
       gameOver(1);
