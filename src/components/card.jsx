@@ -1,6 +1,6 @@
 import { useState,useEffect } from "react";
 
-export default function Card({gifId})
+export default function Card({gifId,name})
 {
     const GIF_ID = '6tb0l9xAT5z48xdwFE'; // pikachu
 
@@ -9,7 +9,7 @@ export default function Card({gifId})
         
         <div className="card">
             <img className='cardImg' src={still} height='300px' width='250px' />
-            <div className="name">iron man</div>
+            <div className="name">{name}</div>
         </div></>)
 }
 
