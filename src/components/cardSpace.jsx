@@ -11,10 +11,23 @@ const gifData=[{name:'iron man',gifId:"lXo8uSnIkaB9e"},
             {name:'spider man',gifId:'VZXJyfOqpvuiIw3oJM'},
     
 ]
+function shuffle(arr)
+{
+    const array=[...arr];
+    for(let i=array.length-1;i>0;i--)
+    {
+
+        const j=Math.floor(Math.random()*(i+1));
+        [array[i],array[j]]=[array[j],array[i]];
+    }
+    return array;
+}
 export default function CardSpace()
 {
+    const data=shuffle(gifData);
+    
     return(<><div className="cardSec">
-       {gifData.map((item)=><Card gifId={item.gifId} name={item.name}/>)}
+       {data.map((item)=><Card gifId={item.gifId} name={item.name}/>)}
         
     </div></>)
 }
