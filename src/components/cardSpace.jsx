@@ -31,7 +31,7 @@ export default function CardSpace(props)
     const data=shuffle(gifData);
     
     return(<><div className="cardSec">
-       {data.map((item)=><Card gifId={item.gifId} name={item.name}
+       {data.map((item)=><Card gifId={item.gifId} name={item.name} key={item.id}
        id={item.id} props={{...props}} />)}
         
     </div></>)

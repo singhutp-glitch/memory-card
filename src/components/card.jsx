@@ -14,6 +14,7 @@ export default function Card({gifId,name,id,props})
                 props.gameOver(0);
             }
             else{
+           
                 props.nextRound(id);}
         }}>
             <img className='cardImg' src={still} height='300px' width='250px' />

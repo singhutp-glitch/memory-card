@@ -23,7 +23,12 @@ export default function Layout()
       
     }
     else{
-      setCardRecord((prev)=>[...prev,prev[lastSelectedCardId]=true]);
+  
+      setCardRecord((prev)=>{
+            const copy=[...prev];
+            copy[lastSelectedCardId]=true;
+            return copy;
+      });
       
     }
   }
